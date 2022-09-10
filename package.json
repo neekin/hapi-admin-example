@@ -1,0 +1,16 @@
+{
+  "name": "test_hapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2",
+    "hapi-admin": "github:neekin/hapi-admin"
+  }
+}
