@@ -1,12 +1,9 @@
 "use strict";
 
-const Hapi = require("@hapi/hapi");
+const createServer = require('hapi-admin/createServer')
 
 const init = async () => {
-  const server = Hapi.server({
-    port: 3000,
-    host: "localhost",
-  });
+  const server = createServer()
 
   await server.register({
     plugin: require("hapi-admin"),
@@ -20,12 +17,6 @@ const init = async () => {
           },
         },
       },
-      jwt:{
-        testcase:false
-      },
-      swagger:{
-        tags: [{ name: "tests", description: "测试相关" }]
-      }
     },
   });
   // await server.register({
