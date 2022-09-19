@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hapi-admin": "^0.0.1"
+    "hapi-admin": "file:../hapi-admin",
+    "mongoose": "^6.6.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"

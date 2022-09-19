@@ -1,31 +1,12 @@
 "use strict";
 
-const createServer = require('hapi-admin/createServer')
+const { createServer } = require('hapi-admin')
 
 const init = async () => {
-  const server = createServer()
+  const server = await createServer()
 
-  await server.register({
-    plugin: require("hapi-admin"),
-    options: {
-      admin: {
-        locale: {
-          translations: {
-            labels: {
-              loginWelcome: "我很开心呀",
-            },
-          },
-        },
-      },
-    },
-  });
-  // await server.register({
-  //   plugin: require('hapi-pino'),
-  //   options: {
-  //       prettyPrint: false,
-  //       logEvents: ['response', 'onPostStart']
-  //   }
-  // })
+  const tt = require('./routes/posts')
+  console.log(tt)
   await server.start();
   console.log("Server running on %s", server.info.uri);
 };
